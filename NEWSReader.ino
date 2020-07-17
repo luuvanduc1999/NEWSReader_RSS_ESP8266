@@ -368,6 +368,7 @@ void showClock( )
 
     u8g2_for_adafruit_gfx.setCursor(200, 210);
     u8g2_for_adafruit_gfx.print( "Humidity");
+    showWeather();
 
   }
 
@@ -408,7 +409,7 @@ void showClock( )
   }
   preDate = datex;
 
-  showWeather();
+  if (abs(idx)%10==0) showWeather();
 
   Serial.println(timeClient.getFormattedDate());
   idx--;
