@@ -300,7 +300,7 @@ void showWeather()
 
   if (String(wStatus) != preStatus)
   {
-    display.fillRect(0, 165, 340, 18, ILI9341_BLACK);
+    display.fillRect(0, 165, 340, 22, ILI9341_BLACK);
 
     u8g2_for_adafruit_gfx.setForegroundColor(ILI9341_ORANGE);
     u8g2_for_adafruit_gfx.setFont(u8g2_font_open_iconic_www_2x_t);
@@ -310,14 +310,14 @@ void showWeather()
     u8g2_for_adafruit_gfx.print(wStatus);
     //10+20+8*14
     u8g2_for_adafruit_gfx.print( " ");
-    for (int i = 0; i < 20; i++)
+    for (int i = 0; i < 30; i++)
       u8g2_for_adafruit_gfx.print( "_");
     preStatus = wStatus;
   }
 
   if (String(wTemp) != preTemp)
   {
-    display.fillRect(60, 212, 40, 20, ILI9341_BLACK);
+    display.fillRect(60, 212, 120, 30, ILI9341_BLACK);
     u8g2_for_adafruit_gfx.setForegroundColor(ILI9341_WHITE);
     u8g2_for_adafruit_gfx.setFont(u8g2_font_helvR14_tf);
     u8g2_for_adafruit_gfx.setCursor(97, 230);
@@ -327,7 +327,7 @@ void showWeather()
 
   if (String(wHumi) != preHumi)
   {
-    display.fillRect(200, 212, 40, 20, ILI9341_BLACK);
+    display.fillRect(200, 212, 120, 30, ILI9341_BLACK);
     u8g2_for_adafruit_gfx.setForegroundColor(ILI9341_WHITE);
     u8g2_for_adafruit_gfx.setFont(u8g2_font_helvR14_tf);
     u8g2_for_adafruit_gfx.setCursor(215, 230);
